@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "707586240458",
+    "project_id": "locate-e5219"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707586240458:android:75031f5ffcb46b3e",
+        "android_client_info": {
+          "package_name": "com.tmsnith.locate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707586240458-841puqrt7m6nj2s9iqg87049dar5g0pg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tmsnith.locate",
+            "certificate_hash": "77B91D35262E37A82EA241D1E87943939AA8FEF0"
+          }
+        },
+        {
+          "client_id": "707586240458-4serd26e8ltlsie9qtmeu7nciivq0pr9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3RUULXGRrOcfkYtl3s0EdYtc6CTFX-h4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
