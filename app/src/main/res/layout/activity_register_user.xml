@@ -38,7 +38,6 @@
             android:id="@+id/emailReg1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="false"
             android:editable="false"
             android:hint="Email" />
 
@@ -83,8 +82,6 @@
             android:layout_height="wrap_content"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
-            android:contextClickable="true"
-            android:linksClickable="true"
             android:text="@string/terms" />
 
         <TextView

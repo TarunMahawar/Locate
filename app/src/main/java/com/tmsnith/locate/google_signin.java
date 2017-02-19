@@ -19,6 +19,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
+import com.tmsnith.locate.utilities.Connection;
 import com.tmsnith.locate.utilities.SharedPref;
 
 public class google_signin extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
@@ -58,6 +59,14 @@ public class google_signin extends AppCompatActivity implements GoogleApiClient.
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Connection c = new Connection(google_signin.this);
+                if(c.isInternet() == false)
+                {
+                    Toast.makeText(google_signin.this, "Internet not connected. ", Toast.LENGTH_LONG).show();
+                    return ;
+                }
+
                 showProgressDialog();
                 signIn();
 
@@ -114,6 +123,7 @@ public class google_signin extends AppCompatActivity implements GoogleApiClient.
             SharedPref s = new SharedPref(this);
             s.setName(acct.getDisplayName());
             s.setEmail(acct.getEmail());
+            s.setPhoto(acct.getPhotoUrl().toString());
             s.setLoginStatus(true);
 
             Intent M = new Intent(google_signin.this, Register_user.class);
@@ -148,6 +158,7 @@ public class google_signin extends AppCompatActivity implements GoogleApiClient.
             mProgressDialog = new ProgressDialog(this);
             mProgressDialog.setTitle("Please wait ...");
             mProgressDialog.setMessage(("Authorizing your access."));
+            mProgressDialog.setCancelable(false);
             mProgressDialog.setIndeterminate(true);
         }
         mProgressDialog.show();

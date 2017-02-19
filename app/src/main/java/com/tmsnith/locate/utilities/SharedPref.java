@@ -13,6 +13,7 @@ public class SharedPref {
     private static final String USER_KEY = "apiKey";
     private static final String Email = "email";
     private static final String Name = "name";
+    private static final String Photo = "photo";
     private static final String HAS_SKIP = "hasSkip";
     private SharedPreferences sharedPref;
     private SharedPreferences.Editor editor;
@@ -28,6 +29,15 @@ public class SharedPref {
 
     public void setName(String name) {
         editor.putString(Name, name);
+        editor.commit();
+    }
+
+    public String getPhoto() {
+        return sharedPref.getString(Photo, "");
+    }
+
+    public void setPhoto(String photo) {
+        editor.putString(Photo, photo);
         editor.commit();
     }
 
