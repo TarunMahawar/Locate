@@ -1,3 +1,3 @@
 # Locate
 
-Android app to keep track of your friends.
+This Android app is developed to keep track of your friends.
